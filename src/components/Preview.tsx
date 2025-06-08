@@ -14,7 +14,7 @@ const Preview: React.FC<PreviewProps> = ({ htmlCode, cssCode, jsCode }) => {
     if (iframeRef.current) {
       const iframe = iframeRef.current;
       const doc = iframe.contentDocument || iframe.contentWindow?.document;
-      
+
       if (doc) {
         const fullHTML = `
           <!DOCTYPE html>
@@ -42,7 +42,7 @@ const Preview: React.FC<PreviewProps> = ({ htmlCode, cssCode, jsCode }) => {
           </body>
           </html>
         `;
-        
+
         doc.open();
         doc.write(fullHTML);
         doc.close();
@@ -51,7 +51,7 @@ const Preview: React.FC<PreviewProps> = ({ htmlCode, cssCode, jsCode }) => {
   }, [htmlCode, cssCode, jsCode]);
 
   return (
-    <motion.div 
+    <motion.div
       className="h-full bg-white relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -64,7 +64,7 @@ const Preview: React.FC<PreviewProps> = ({ htmlCode, cssCode, jsCode }) => {
         title="Code Preview"
         sandbox="allow-scripts allow-same-origin"
       />
-      
+
       {/* Loading Overlay */}
       <motion.div
         initial={{ opacity: 1 }}

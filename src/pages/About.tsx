@@ -42,7 +42,7 @@ const About: React.FC = () => {
   const stats = [
     { label: 'Lines of Code', value: '10K+' },
     { label: 'Active Users', value: '2.5K+' },
-    { label: 'Projects Created', value: '15K+' },
+    { label: 'Projects Created', value: '10+' },
     { label: 'Coffee Consumed', value: '∞' }
   ];
 
