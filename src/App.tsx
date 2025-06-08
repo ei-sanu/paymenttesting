@@ -5,9 +5,10 @@ import FloatingGeometry from './components/FloatingGeometry';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Loader from './components/Loader';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
-
 export type PageType = 'home' | 'about' | 'how-it-works' | 'contact';
 
 // Create a wrapped component to use useLocation
@@ -75,6 +76,8 @@ const AppContent = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/how-it-works" element={<HowItWorks />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
@@ -85,12 +88,12 @@ const AppContent = () => {
   );
 };
 
-function App() {
+const App = () => {
   return (
     <Router>
       <AppContent />
     </Router>
   );
-}
+};
 
 export default App;
