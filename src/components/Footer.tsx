@@ -15,9 +15,9 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: '', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/ei-sanu', label: 'GitHub' },
+    { icon: Twitter, href: 'https://x.com/SomeshR82674271', label: 'Twitter' },
+    { icon: Linkedin, href: 'www.linkedin.com/in/somesh-biswal-b73576320', label: 'LinkedIn' },
     { icon: Mail, href: 'mailto:someshranjanbiswal13678@gmail.com', label: 'Email' },
   ];
 
