@@ -1,17 +1,18 @@
 import { motion } from 'framer-motion';
-import { Code, ExternalLink, Github, Heart, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Code, Github, Heart, Linkedin, Mail, Twitter } from 'lucide-react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  const handleNavigation = (path: string, isExternal: boolean = false) => {
+    if (isExternal) {
+      window.open(path, '_blank');
+    } else {
+      navigate(path);
+      window.scrollTo(0, 0);
+    }
   };
 
   const socialLinks = [
@@ -80,7 +81,7 @@ const Footer: React.FC = () => {
 
       <div className="relative z-10 container mx-auto px-6 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div>
             <motion.div
@@ -122,45 +123,23 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Links Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {footerLinks.map((section, sectionIndex) => (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 + sectionIndex * 0.1, duration: 0.6 }}
-              >
-                <h3 className="text-lg font-semibold text-amber-400 mb-4 font-mono">
-                  {section.title}
-                </h3>
-                <ul className="space-y-3">
-                  {section.links.map((link, linkIndex) => (
-                    <motion.li key={linkIndex}>
-                      {link.external ? (
-                        <a
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-gray-300 hover:text-amber-400 transition-colors duration-300 flex items-center group"
-                        >
-                          {link.name}
-                          <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </a>
-                      ) : (
-                        <button
-                          onClick={() => handleNavigation(link.href)}
-                          className="text-gray-300 hover:text-amber-400 transition-colors duration-300 flex items-center group"
-                        >
-                          {link.name}
-                          <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        </button>
-                      )}
-                    </motion.li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
+          {footerLinks.map((section, index) => (
+            <div key={index} className="space-y-4">
+              <h3 className="text-amber-400 text-lg font-semibold">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <button
+                      onClick={() => handleNavigation(link.href, link.external)}
+                      className="text-gray-400 hover:text-amber-400 transition-colors"
+                    >
+                      {link.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom Bar */}

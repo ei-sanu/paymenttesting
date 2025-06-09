@@ -6,10 +6,13 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Loader from './components/Loader';
 import About from './pages/About';
+import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
-export type PageType = 'home' | 'about' | 'how-it-works' | 'contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+export type PageType = 'home' | 'about' | 'how-it-works' | 'contact' | 'careers' | 'privacy' | 'terms';
 
 // Create a wrapped component to use useLocation
 const AppContent = () => {
@@ -78,6 +81,9 @@ const AppContent = () => {
               <Route path="/how-it-works" element={<HowItWorks />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </motion.div>
         </AnimatePresence>
