@@ -86,7 +86,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   };
 
   const handlePaymentAndDownload = () => {
-    const upiLink = `upi://pay?pa=7008450074@ybl&pn=CyberCode&am=10&cu=INR&tn=Code_Download`;
+    const upiLink = `upi://pay?pa=7008450074@pz&pn=CyberCode&am=10&cu=INR&tn=Code_Download`;
 
     // Check if the user is on a mobile device
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
