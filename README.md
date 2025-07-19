@@ -16,7 +16,7 @@
 - [Installation & Setup](#installation--setup)
 - [Environment Configuration](#environment-configuration)
 - [Usage Guide](#usage-guide)
-- [API Integration](#api-integration)
+- [Backend Server Integration](#api-integration)
 - [Component Architecture](#component-architecture)
 - [Security & Performance](#security--performance)
 - [Contributing](#contributing)
@@ -41,7 +41,7 @@ TrackMyTrek is an innovative tech career guidance platform designed to help deve
 ## ✨ Key Features
 
 ### 🔐 Authentication & User Management
-- **Secure Authentication**: Powered by Clerk for robust user management
+- **Secure Authentication**: End to End Encryption
 - **Protected Routes**: Secure access to personalized content
 - **Profile Management**: Comprehensive user profile with progress tracking
 - **Social Integration**: Connect with professional networks
@@ -282,9 +282,6 @@ VITE_API_BASE_URL=https://api.trackmytrek.com
 VITE_JOB_API_KEY=your_job_api_key_here
 VITE_LEARNING_PLATFORM_API=your_learning_api_key
 
-# Analytics (Optional)
-VITE_ANALYTICS_ID=your_analytics_id
-
 # Feature Flags
 VITE_ENABLE_OFFLINE_MODE=true
 VITE_ENABLE_BETA_FEATURES=false
@@ -296,7 +293,6 @@ VITE_ENABLE_BETA_FEATURES=false
 |----------|-------------|----------|
 | `VITE_CLERK_PUBLISHABLE_KEY` | Clerk authentication key | Yes |
 | `VITE_BACKEND_FORMS_ENDPOINT` | Contact form processing endpoint | Yes |
-| `VITE_API_BASE_URL` | Main API base URL | No |
 
 ---
 
@@ -467,6 +463,7 @@ We welcome contributions to TrackMyTrek! Please follow these guidelines:
 - Performance optimizations
 - Accessibility enhancements
 - Bug fixes and feature requests
+- Full Profile with Database Integrations
 
 ---
 
@@ -502,20 +499,17 @@ TrackMyTrek is built with passion by developers who believe in making tech educa
 
 ## 📞 Support & Contact
 
-- **Documentation**: [docs.trackmytrek.com](https://docs.trackmytrek.com)
-- **Community**: [community.trackmytrek.com](https://community.trackmytrek.com)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/trackmytrek/issues)
-- **Email**: support@trackmytrek.com
-- **Twitter**: [@TrackMyTrek](https://twitter.com/trackmytrek)
+- **Issues**: [GitHub Issues](https://github.com/ei-sanu/trackmytrek/issues)
+- **Email**: [Somesh](mailto:someshranjanbiswal13678@gmail.com)
+- **Portfolio**: [somesh.social](https://somesh.social/)
 
 ---
 
 <div align="center">
-  <p>Made with ❤️ for the tech community</p>
+  <p>Made with ❤️ for the tech community By Somesh</p>
   <p>
     <a href="https://trackmytrek.com">🌐 Visit TrackMyTrek</a> |
-    <a href="https://docs.trackmytrek.com">📚 Documentation</a> |
-    <a href="https://github.com/yourusername/trackmytrek/issues">🐛 Report Bug</a> |
-    <a href="https://github.com/yourusername/trackmytrek/issues">💡 Request Feature</a>
+    <a href="https://github.com/ei-sanu/trackmytrek/issues">🐛 Report Bug</a> |
+    <a href="https://github.com/ei-sanu/trackmytrek/issues">💡 Request Feature</a>
   </p>
 </div>
